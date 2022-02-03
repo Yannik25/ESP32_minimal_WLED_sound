@@ -22,4 +22,8 @@ _autosave-*
 
 # Exported BOM files
 *.xml
-*.csv
+
+
+*fp-info-cache
+*.kicad_prl
+*.DS_Store
