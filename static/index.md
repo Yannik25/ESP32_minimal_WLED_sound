@@ -2,7 +2,7 @@
 
 ESPHome Configuration for ESP32 Digital LED Sound reactive module
 <center>
-    <img src="https://raw.githubusercontent.com/Yannik25/https://yannik25.github.io/ESP32_minimal_WLED_sound//main/pcb3d.jpg" alt="image of esp32 module" width="500" />
+    <img src="https://raw.githubusercontent.com/Yannik25/ESP32_minimal_WLED_sound/main/pcb3d.jpg" alt="image of esp32 module" width="500" />
 </center>
 
 
