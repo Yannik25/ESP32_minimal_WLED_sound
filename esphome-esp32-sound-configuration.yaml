@@ -1,6 +1,6 @@
 # These substitutions allow the end user to override certain values
 substitutions:
-  name: "hvio-switch-module"
+  name: "esp32-sound-module"
 
 esphome:
   name: "${name}"
@@ -11,11 +11,11 @@ esphome:
   # This will allow for (future) project identification,
   # configuration and updates.
   project:
-    name: Yannik25.hvio-switch-module
+    name: Yannik25.esp32-sound-module
     version: "1.0"
 
-esp8266:
-  board: nodemcuv2
+esp32:
+  board: esp-wrover-kit
 
 # To be able to get logs from the device via serial and api.
 logger:
@@ -28,7 +28,7 @@ ota:
 
 # This should point to the public location of this yaml file.
 dashboard_import:
-  package_import_url: github://Yannik25/esphome_hvio_configuration/esphome-hvio-configuration.yaml@main
+  package_import_url: github://Yannik25/ESP32_minimal_WLED_sound/esphome-esp32-sound-configuration.yaml@main
   
 wifi:
   # Set up a wifi access point using the device name above
@@ -39,29 +39,44 @@ wifi:
 # to provision wifi credentials to the device.
 captive_portal:
 
-status_led:
-  pin: GPIO15
+i2c:
+
+sensor:
+  - platform: ina226
+    address: 0x40
+    shunt_resistance: 0.1 ohm
+    current:
+      name: "INA226 Current"
+    power:
+      name: "INA226 Power"
+    bus_voltage:
+      name: "INA226 Bus Voltage"
+    shunt_voltage:
+      name: "INA226 Shunt Voltage"
+    max_current: 3.2A
+    update_interval: 60s
 
 switch:
   - platform: gpio
-    pin: GPIO4
+    pin: GPIO17
     name: "Output 1"
-  - platform: gpio
-    pin: GPIO5
-    name: "Output 2"
     
-binary_sensor:
-  - platform: gpio
-    pin: 
-      number: D6
-      inverted: true
-    name: "Input 1"
-  - platform: gpio
-    pin: 
-      number: D7
-      inverted: true
-    name: "Input 2"
-    
+light:
+  - platform: neopixelbus
+    type: GRB
+    variant: WS2812
+    pin: GPIO2
+    num_leds: 60
+    name: "NeoPixel Light 2"
+
+light:
+  - platform: neopixelbus
+    type: GRB
+    variant: WS2812
+    pin: GPIO4
+    num_leds: 60
+    name: "NeoPixel Light 4"
+        
 ##########################################################
 # Most projects should not remove anything from above here
 # and should just modify the name, project name/version 

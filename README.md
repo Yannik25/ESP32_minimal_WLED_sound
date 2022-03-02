@@ -21,4 +21,4 @@ website via GitHub pages that utilises [ESP Web Tools](https://esphome.github.io
 easily install your project onto their device.
 
 ## Instructions
-Open: [https://yannik25.github.io/esphome-esp32-sound-configuration/](https://yannik25.github.io/esphome-esp32-sound-configuration/) and follow instructions.
+Open: [https://yannik25.github.io/ESP32_minimal_WLED_sound/](https://yannik25.github.io/ESP32_minimal_WLED_sound/) and follow instructions.
