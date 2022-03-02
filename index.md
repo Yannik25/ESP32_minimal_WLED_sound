@@ -1,9 +1,8 @@
 # About
 
-ESPHome Configuration for:
-<a href="https://luani.de/projekte/esp8266-hvio/">https://luani.de/projekte/esp8266-hvio/</a>.
+ESPHome Configuration for ESP32 Digital LED Sound reactive module
 <center>
-    <img src="https://raw.githubusercontent.com/Yannik25/esphome-esp32-sound-configuration/main/pcb3d.jpg" alt="image of hvio module" width="500" />
+    <img src="https://raw.githubusercontent.com/Yannik25/https://yannik25.github.io/ESP32_minimal_WLED_sound//main/pcb3d.jpg" alt="image of esp32 module" width="500" />
 </center>
 
 

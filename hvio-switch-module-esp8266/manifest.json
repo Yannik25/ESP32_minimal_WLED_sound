@@ -1,9 +1,0 @@
-{
-  "chipFamily": "ESP8266",
-  "parts": [
-    {
-      "path": "hvio-switch-module-esp8266/firmware.bin",
-      "offset": 0
-    }
-  ]
-}
